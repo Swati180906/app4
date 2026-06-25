@@ -90,11 +90,19 @@ mongoose
   });
 
 // ===============================
-// Start Server
+// Start Server (Local)
 // ===============================
 
-app.listen(PORT, () => {
-  console.log(
-    `🚀 Server Running On Port ${PORT}`
-  );
-});
+if (process.env.VERCEL !== "1") {
+  app.listen(PORT, () => {
+    console.log(
+      `🚀 Server Running On Port ${PORT}`
+    );
+  });
+}
+
+// ===============================
+// Export for Vercel
+// ===============================
+
+module.exports = app;
