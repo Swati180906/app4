@@ -1,5 +1,6 @@
-const path = require("path");
-require("dotenv").config({ path: path.join(__dirname, ".env") });
+if (process.env.VERCEL !== "1") {
+  require("dotenv").config({ path: require("path").join(__dirname, ".env") });
+}
 
 const dns = require("dns");
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
