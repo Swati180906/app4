@@ -1,0 +1,6 @@
+◇ injected env (10) from .env // tip: ⌘ override existing { override: true }
+◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com]
+🚀 Server Running On Port 9191
+✅ Email transporter verified
+✅ Email transporter verified
+✅ MongoDB Connected Successfully
